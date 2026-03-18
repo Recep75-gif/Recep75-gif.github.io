@@ -3,26 +3,623 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mavzer Reklam Tabela & Dijital Baskı</title>
-  <meta name="description" content="Mavzer Reklam Tabela & Dijital Baskı — Işıklı tabela, kutu harf, cam giydirme, araç giydirme ve profesyonel dijital baskı çözümleri." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Mavzer Reklam Tabela & Dijital Baskı | Esenyurt İstanbul</title>
+  <meta name="description" content="Mavzer Reklam Tabela & Dijital Baskı; ışıklı tabela, ışıksız tabela, kutu harf tabela, pleksi harf, paslanmaz tabela, dijital baskı, cam giydirme ve araç giydirme hizmetleri sunar." />
+  <meta name="keywords" content="Mavzer Reklam, tabela, dijital baskı, ışıklı tabela, ışıksız tabela, kutu harf tabela, pleksi harf, paslanmaz tabela, cam giydirme, araç giydirme, Esenyurt tabela" />
+  <meta name="author" content="Mavzer Reklam" />
+
+  <meta property="og:title" content="Mavzer Reklam Tabela & Dijital Baskı" />
+  <meta property="og:description" content="İstanbul Esenyurt'ta profesyonel tabela ve dijital baskı çözümleri." />
+  <meta property="og:image" content="logo.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mavzerreklam.com.tr/" />
+
+  <link rel="icon" type="image/jpeg" href="logo.jpeg" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root {
+      --bg: #06111d;
+      --bg-soft: #0b1c2d;
+      --card: rgba(12, 26, 43, 0.78);
+      --line: rgba(104, 199, 255, 0.16);
+      --text: #eef6ff;
+      --muted: #9fb4c8;
+      --primary: #16d7ff;
+      --primary-2: #1effb2;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --max: 1240px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(22, 215, 255, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(30, 255, 178, 0.08), transparent 25%),
+        linear-gradient(180deg, #04101b 0%, #071626 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .section-text {
+      color: var(--muted);
+      max-width: 780px;
+      font-size: 17px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(4, 12, 20, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #0e2135;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .menu a {
+      color: #dce9f7;
+      font-size: 16px;
+      transition: 0.25s ease;
+    }
+
+    .menu a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      padding: 12px 20px;
+      border: 1px solid rgba(22, 215, 255, 0.35);
+      border-radius: 999px;
+      color: white;
+    }
+
+    .hero {
+      padding: 56px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(17, 36, 57, 0.8);
+      border: 1px solid var(--line);
+      color: #c8def2;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.95;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(224, 245, 255, 0.9);
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 24px;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #29ffcf);
+      color: #04101b;
+      box-shadow: 0 10px 30px rgba(22, 215, 255, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.02);
+      border-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(22, 215, 255, 0.35);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-card span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      min-height: 240px;
+      background: #0b1b2d;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card.tall {
+      grid-row: span 2;
+      min-height: 500px;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(2, 6, 12, 0.4), rgba(2, 6, 12, 0.05));
+    }
+
+    .hero-card span {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      z-index: 2;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.38);
+      color: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .service-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(22, 215, 255, 0.24);
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    .about-card,
+    .contact-card,
+    .reference-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card p + p {
+      margin-top: 16px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #091526;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-caption {
+      padding: 16px 18px 20px;
+    }
+
+    .gallery-caption h4 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .gallery-caption p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .references-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .reference-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .reference-card p {
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
+      margin-top: 34px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .map-wrap {
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      min-height: 100%;
+      background: #091526;
+      box-shadow: var(--shadow);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      border: 0;
+    }
+
+    .footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(0, 0, 0, 0.12);
+      margin-top: 30px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer p {
+      color: var(--muted);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      padding: 16px 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #16d7ff, #1effb2);
+      color: #031019;
+      font-weight: 800;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gallery-grid,
+      .references-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .menu {
+        display: none;
+      }
+
+      .hero-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-card.tall {
+        min-height: 320px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 20px, var(--max));
+      }
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-text strong {
+        font-size: 17px;
+      }
+
+      .brand-text span {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .hero-gallery,
+      .services-grid,
+      .gallery-grid,
+      .references-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .hero-card.tall {
+        min-height: 250px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        padding: 14px 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="site-bg"></div>
-  <header class="header">
+
+  <header class="topbar">
     <div class="container nav">
       <a href="#anasayfa" class="brand">
-        <img src="assets/logo.jpeg" alt="Mavzer Reklam logo" />
-        <div>
+        <img src="logo.jpeg" alt="Mavzer Reklam Logo" class="brand-logo" />
+        <div class="brand-text">
           <strong>Mavzer Reklam</strong>
           <span>Tabela & Dijital Baskı</span>
         </div>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç">☰</button>
-      <nav id="mainNav">
+
+      <nav class="menu">
         <a href="#hakkimizda">Hakkımızda</a>
         <a href="#hizmetler">Hizmetler</a>
         <a href="#projeler">Projeler</a>
@@ -35,48 +632,95 @@
   <main>
     <section class="hero" id="anasayfa">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">İstanbul / Esenyurt</p>
-          <h1>Mavzer Reklam <span>Tabela & Dijital Baskı</span></h1>
-          <p class="lead">Markanızı uzaktan fark ettiren, gece gündüz dikkat çeken profesyonel tabela ve baskı çözümleri üretiyoruz.</p>
+        <div>
+          <div class="eyebrow">İstanbul / Esenyurt</div>
+          <h1>
+            Mavzer Reklam
+            <span>Tabela & Dijital Baskı</span>
+          </h1>
+          <p>
+            Markanızı uzaktan fark ettiren, gece gündüz dikkat çeken profesyonel tabela
+            ve baskı çözümleri üretiyoruz.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/905539253475" target="_blank" rel="noopener">WhatsApp Teklif Al</a>
+            <a class="btn btn-primary" href="https://wa.me/905539253475?text=Merhaba%20Mavzer%20Reklam%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">
+              WhatsApp Teklif Al
+            </a>
             <a class="btn btn-secondary" href="#projeler">İşlerimizi İncele</a>
           </div>
-          <div class="stats">
-            <div><strong>12+</strong><span>Uzman hizmet kalemi</span></div>
-            <div><strong>Hızlı</strong><span>Keşif ve teklif süreci</span></div>
-            <div><strong>Modern</strong><span>Tasarım ve uygulama</span></div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>12+</strong>
+              <span>Uzman hizmet kalemi</span>
+            </div>
+            <div class="stat-card">
+              <strong>Hızlı</strong>
+              <span>Keşif ve teklif süreci</span>
+            </div>
+            <div class="stat-card">
+              <strong>Modern</strong>
+              <span>Tasarım ve uygulama</span>
+            </div>
           </div>
         </div>
-        <div class="hero-visual reveal">
-          <div class="hero-card large">
-            <img src="assets/proje-1.jpeg" alt="Tabela uygulaması" />
+
+        <div class="hero-gallery">
+          <div class="hero-card tall">
+            <span>Tabela uygulaması</span>
+            <img src="proje-1.jpeg" alt="Tabela uygulaması" />
           </div>
-          <div class="hero-stack">
-            <div class="hero-card small"><img src="assets/proje-2.jpeg" alt="Dükkan tabela örneği" /></div>
-            <div class="hero-card small"><img src="assets/proje-3.jpeg" alt="Işıklı tabela uygulaması" /></div>
+          <div class="hero-card">
+            <span>Dükkan tabela örneği</span>
+            <img src="proje-2.jpeg" alt="Dükkan tabela örneği" />
+          </div>
+          <div class="hero-card">
+            <span>Işıklı tabela uygulaması</span>
+            <img src="proje-3.jpeg" alt="Işıklı tabela uygulaması" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="hakkimizda">
-      <div class="container two-col">
-        <div class="section-title reveal">
-          <p class="eyebrow">Hakkımızda</p>
-          <h2>Markanızı görünür kılan tasarım, üretim ve uygulama gücü</h2>
-        </div>
-        <div class="about-box reveal">
-          <p><strong>Mavzer Reklam Tabela & Dijital Baskı</strong>, İstanbul Esenyurt'ta faaliyet gösteren, işletmelerin görünürlüğünü artıran profesyonel reklam ve tabela çözümleri sunan bir firmadır.</p>
-          <p>Yılların verdiği tecrübe ve uzman ekibimizle; ışıklı ve ışıksız tabeladan dijital baskıya, cam ve araç giydirmeden özel tasarım çözümlere kadar geniş bir hizmet yelpazesi sunuyoruz. Her projede estetik, dayanıklılık ve kaliteyi ön planda tutarak müşterilerimize en doğru çözümleri üretmeyi hedefliyoruz.</p>
-          <p>İşletmenizin dikkat çekmesi ve markanızın daha güçlü görünmesi için modern tasarımlar, kaliteli malzeme ve titiz işçilikle çalışıyoruz. Proje sürecinin her aşamasında müşteri memnuniyetini esas alıyor, zamanında teslim ve profesyonel montaj ile fark yaratıyoruz.</p>
-          <p><strong>Mavzer Reklam</strong> olarak amacımız; markanızı en iyi şekilde yansıtan, uzun ömürlü ve etkili reklam çözümleri sunarak işinizi bir adım öne taşımaktır.</p>
-          <div class="about-highlights">
-            <span>Keşif & ölçü</span>
-            <span>Tasarım desteği</span>
-            <span>Üretim & montaj</span>
-            <span>Kurumsal görünüm</span>
+      <div class="container">
+        <h2 class="section-title">Hakkımızda</h2>
+        <p class="section-text">
+          Mavzer Reklam Tabela & Dijital Baskı, İstanbul Esenyurt'ta faaliyet gösteren,
+          işletmelerin görünürlüğünü artıran profesyonel reklam ve tabela çözümleri sunan bir firmadır.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <p>
+              Yılların verdiği tecrübe ve uzman ekibimizle; ışıklı ve ışıksız tabeladan dijital baskıya,
+              cam ve araç giydirmeden özel tasarım çözümlere kadar geniş bir hizmet yelpazesi sunuyoruz.
+            </p>
+            <p>
+              Her projede estetik, dayanıklılık ve kaliteyi ön planda tutarak müşterilerimize en doğru
+              çözümleri üretmeyi hedefliyoruz.
+            </p>
+            <p>
+              İşletmenizin dikkat çekmesi ve markanızın daha güçlü görünmesi için modern tasarımlar,
+              kaliteli malzeme ve titiz işçilikle çalışıyoruz. Proje sürecinin her aşamasında müşteri
+              memnuniyetini esas alıyor, zamanında teslim ve profesyonel montaj ile fark yaratıyoruz.
+            </p>
+            <p>
+              Mavzer Reklam olarak amacımız; markanızı en iyi şekilde yansıtan, uzun ömürlü ve etkili
+              reklam çözümleri sunarak işinizi bir adım öne taşımaktır.
+            </p>
+
+            <div class="hero-actions" style="margin-top: 24px;">
+              <a class="btn btn-primary" href="tel:+905539253475">Hemen Ara</a>
+              <a class="btn btn-secondary" href="https://wa.me/905539253475?text=Merhaba%20Mavzer%20Reklam%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <img src="proje-4.jpeg" alt="Mavzer Reklam örnek çalışma" style="border-radius: 20px; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 16px;">
+            <img src="proje-5.jpeg" alt="Tabela uygulama örneği" style="border-radius: 20px; aspect-ratio: 4/3; object-fit: cover; margin-bottom: 16px;">
+            <img src="proje-6.jpeg" alt="Dijital baskı ve tabela örneği" style="border-radius: 20px; aspect-ratio: 4/3; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -84,111 +728,279 @@
 
     <section class="section" id="hizmetler">
       <div class="container">
-        <div class="section-title center reveal">
-          <p class="eyebrow">Hizmetler</p>
-          <h2>İşletmeniz için uçtan uca reklam çözümleri</h2>
-        </div>
+        <h2 class="section-title">Hizmetlerimiz</h2>
+        <p class="section-text">
+          Tabela, dijital baskı ve dış cephe reklam çözümlerinde ihtiyacınıza uygun tasarım, üretim ve uygulama hizmeti sunuyoruz.
+        </p>
+
         <div class="services-grid">
-          <article class="service reveal"><h3>Işıklı tabela</h3><p>Gece görünürlüğü yüksek, dikkat çekici ışıklı sistemler.</p></article>
-          <article class="service reveal"><h3>Işıksız tabela</h3><p>Sade, kurumsal ve güçlü cephe uygulamaları.</p></article>
-          <article class="service reveal"><h3>Kutu harf tabela</h3><p>3 boyutlu, premium ve modern kurumsal görünüm.</p></article>
-          <article class="service reveal"><h3>Pleksi harf tabela</h3><p>Şık, temiz ve estetik harf çözümleri.</p></article>
-          <article class="service reveal"><h3>Paslanmaz tabela</h3><p>Dayanıklı ve prestijli paslanmaz yüzey uygulamaları.</p></article>
-          <article class="service reveal"><h3>Kompozit tabela</h3><p>Düzgün yüzeyli, modern ve uzun ömürlü cephe kaplama.</p></article>
-          <article class="service reveal"><h3>Totem tabela</h3><p>Uzaktan fark edilen büyük ölçekli yönlendirme çözümleri.</p></article>
-          <article class="service reveal"><h3>Vinil germe tabela</h3><p>Geniş yüzeyli ekonomik ve etkili tabela sistemleri.</p></article>
-          <article class="service reveal"><h3>Dijital baskı</h3><p>Canlı renkler ve net detaylarla profesyonel baskı üretimi.</p></article>
-          <article class="service reveal"><h3>Branda baskı</h3><p>Etkinlik, tanıtım ve dış mekân kullanımı için baskı çözümleri.</p></article>
-          <article class="service reveal"><h3>Cam giydirme</h3><p>Vitrin ve ofis camlarında kurumsal kimlik uygulamaları.</p></article>
-          <article class="service reveal"><h3>Araç giydirme</h3><p>Aracınızı hareketli reklam alanına dönüştüren tasarımlar.</p></article>
+          <div class="service-card">
+            <h3>Işıklı Tabela</h3>
+            <p>Gece görünürlüğünü artıran modern ve dikkat çekici tabela çözümleri.</p>
+          </div>
+          <div class="service-card">
+            <h3>Işıksız Tabela</h3>
+            <p>Kurumsal ve sade görünüm sunan uzun ömürlü tabela uygulamaları.</p>
+          </div>
+          <div class="service-card">
+            <h3>Kutu Harf Tabela</h3>
+            <p>Markanıza güçlü ve premium bir görünüm kazandıran özel harf çözümleri.</p>
+          </div>
+          <div class="service-card">
+            <h3>Pleksi Harf Tabela</h3>
+            <p>Şık ve temiz bir yüzey sunan estetik harf tabela uygulamaları.</p>
+          </div>
+          <div class="service-card">
+            <h3>Paslanmaz Tabela</h3>
+            <p>Dayanıklı, modern ve prestijli paslanmaz tabela üretimi.</p>
+          </div>
+          <div class="service-card">
+            <h3>Kompozit Tabela</h3>
+            <p>Dış cephelerde şık ve kurumsal görünüm sağlayan kompozit çözümler.</p>
+          </div>
+          <div class="service-card">
+            <h3>Totem Tabela</h3>
+            <p>Uzaktan fark edilen yüksek ve etkili yönlendirme tabela uygulamaları.</p>
+          </div>
+          <div class="service-card">
+            <h3>Vinil Germe Tabela</h3>
+            <p>Geniş yüzeylerde ekonomik ve dikkat çekici reklam çözümleri.</p>
+          </div>
+          <div class="service-card">
+            <h3>Dijital Baskı</h3>
+            <p>Yüksek çözünürlüklü profesyonel baskı hizmetleri.</p>
+          </div>
+          <div class="service-card">
+            <h3>Branda Baskı</h3>
+            <p>Açık hava reklamlarında güçlü görünüm sağlayan baskı uygulamaları.</p>
+          </div>
+          <div class="service-card">
+            <h3>Cam Giydirme</h3>
+            <p>Vitrin ve cam yüzeylerde dikkat çekici kurumsal tasarım uygulamaları.</p>
+          </div>
+          <div class="service-card">
+            <h3>Araç Giydirme</h3>
+            <p>Araçlarınızı hareketli reklam alanına dönüştüren profesyonel kaplama hizmeti.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section projects" id="projeler">
+    <section class="section" id="projeler">
       <div class="container">
-        <div class="section-title center reveal">
-          <p class="eyebrow">Projeler</p>
-          <h2>Gerçek uygulamalarımızdan seçilmiş işler</h2>
-        </div>
-        <div class="gallery">
-          <figure class="gallery-item reveal"><img src="assets/proje-1.jpeg" alt="Proje 1" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-2.jpeg" alt="Proje 2" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-3.jpeg" alt="Proje 3" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-4.jpeg" alt="Proje 4" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-5.jpeg" alt="Proje 5" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-6.jpeg" alt="Proje 6" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-7.jpeg" alt="Proje 7" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-8.jpeg" alt="Proje 8" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-9.jpeg" alt="Proje 9" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-10.jpeg" alt="Proje 10" loading="lazy"></figure>
-          <figure class="gallery-item reveal"><img src="assets/proje-11.jpeg" alt="Proje 11" loading="lazy"></figure>
+        <h2 class="section-title">Projelerimiz</h2>
+        <p class="section-text">
+          Gerçek uygulamalarımızdan bazı örnekleri aşağıda inceleyebilirsiniz.
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="proje-1.jpeg" alt="Restoran tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Restoran tabela uygulaması</h4>
+              <p>Işıklı dış cephe tabela çalışması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-2.jpeg" alt="Kurumsal dış cephe tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Kurumsal dış cephe tabela</h4>
+              <p>Modern ve dikkat çekici tabela tasarımı.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-3.jpeg" alt="Cafe tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Cafe tabela uygulaması</h4>
+              <p>Gece görünürlüğü yüksek tabela çözümü.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-4.jpeg" alt="Kurumsal cephe uygulaması" />
+            <div class="gallery-caption">
+              <h4>Kurumsal cephe uygulaması</h4>
+              <p>Markaya özel dış cephe görünümü.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-5.jpeg" alt="Organizasyon salonu tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Salon tabela uygulaması</h4>
+              <p>Şık ve premium giriş tasarımı.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-6.jpeg" alt="İç mekan neon uygulaması" />
+            <div class="gallery-caption">
+              <h4>İç mekan neon uygulaması</h4>
+              <p>Özel dekoratif ışıklı yazı uygulaması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-7.jpeg" alt="Döner salonu dış cephe uygulaması" />
+            <div class="gallery-caption">
+              <h4>Döner salonu tabela</h4>
+              <p>Dış cephe tabela ve yönlendirme çalışması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-8.jpeg" alt="Tantuni dükkan tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Tantuni dükkan tabela</h4>
+              <p>Kutu harf ve cephe reklam uygulaması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-9.jpeg" alt="İnşaat ofisi tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>İnşaat ofisi tabela</h4>
+              <p>Dış cephe ve vitrin tasarım uygulaması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-10.jpeg" alt="Gayrimenkul ofisi tabela uygulaması" />
+            <div class="gallery-caption">
+              <h4>Gayrimenkul ofisi tabela</h4>
+              <p>Kurumsal renklerle tasarlanmış tabela.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="proje-11.jpeg" alt="Kurumsal vitrin ve cephe reklamı" />
+            <div class="gallery-caption">
+              <h4>Kurumsal vitrin uygulaması</h4>
+              <p>Vitrin baskı ve dış cephe görünüm tasarımı.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="logo.jpeg" alt="Mavzer Reklam logo" />
+            <div class="gallery-caption">
+              <h4>Mavzer Reklam</h4>
+              <p>Tabela ve dijital baskı çözümleriniz için profesyonel partneriniz.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="referanslar">
       <div class="container">
-        <div class="section-title center reveal">
-          <p class="eyebrow">Referans</p>
-          <h2>Farklı sektörlerden işletmeler için güçlü görünürlük</h2>
-        </div>
-        <div class="references">
-          <div class="ref-card reveal"><strong>Restoran & kafe</strong><span>Cephenizi daha davetkâr ve görünür hale getiriyoruz.</span></div>
-          <div class="ref-card reveal"><strong>Mağaza & işletme</strong><span>Kurumsal kimliğinize uygun tabela ve cam giydirme çözümleri.</span></div>
-          <div class="ref-card reveal"><strong>Düğün salonu & etkinlik</strong><span>Şık ve premium görünüm sağlayan özel uygulamalar.</span></div>
-          <div class="ref-card reveal"><strong>Kurumsal ofis</strong><span>Yönlendirme, vitrin ve cephe tasarımlarında temiz sonuçlar.</span></div>
+        <h2 class="section-title">Neden Bizi Tercih Etmelisiniz?</h2>
+        <p class="section-text">
+          Her projede kalite, hız ve profesyonel uygulama anlayışıyla çalışıyoruz.
+        </p>
+
+        <div class="references-grid">
+          <div class="reference-card">
+            <h3>Kaliteli Malzeme</h3>
+            <p>
+              Uzun ömürlü, dayanıklı ve estetik çözümler için kaliteli malzeme kullanıyoruz.
+            </p>
+          </div>
+          <div class="reference-card">
+            <h3>Zamanında Teslim</h3>
+            <p>
+              Projelerinizi planlanan sürede teslim ederek iş süreçlerinizi aksatmıyoruz.
+            </p>
+          </div>
+          <div class="reference-card">
+            <h3>Profesyonel Uygulama</h3>
+            <p>
+              Tasarımdan montaja kadar tüm süreçlerde titiz ve güvenilir hizmet sunuyoruz.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="iletisim">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <p class="eyebrow">İletişim</p>
-          <h2>Teklif alın, projenizi birlikte planlayalım</h2>
-          <div class="contact-list">
-            <a href="tel:05539253475"><strong>Telefon:</strong> 0553 925 34 75</a>
-            <a href="https://wa.me/905539253475" target="_blank" rel="noopener"><strong>WhatsApp:</strong> 0553 925 34 75</a>
-            <a href="https://www.instagram.com/mavzerreklam/" target="_blank" rel="noopener"><strong>Instagram:</strong> @mavzerreklam</a>
-            <p><strong>Adres:</strong> İstanbul / Esenyurt, Pınar Mahallesi, Sönmez Caddesi No:169 Bağ.Böl:1 Dük:1</p>
+    <section class="section" id="iletisim">
+      <div class="container">
+        <h2 class="section-title">İletişim</h2>
+        <p class="section-text">
+          Teklif almak, keşif oluşturmak veya detaylı bilgi edinmek için bizimle hemen iletişime geçin.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="font-size: 28px; margin-bottom: 8px;">Mavzer Reklam Tabela & Dijital Baskı</h3>
+            <p style="color: var(--muted);">
+              İstanbul Esenyurt'ta profesyonel tabela ve dijital baskı hizmetleri sunuyoruz.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Telefon</strong>
+                <a href="tel:+905539253475">0553 925 34 75</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/905539253475?text=Merhaba%20Mavzer%20Reklam%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">0553 925 34 75</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/mavzerreklam/" target="_blank" rel="noopener noreferrer">@mavzerreklam</a>
+              </div>
+
+              <div class="contact-item">
+                <strong>Adres</strong>
+                <span>İstanbul / Esenyurt Pınar Mahallesi Sönmez Caddesi No:169 Bağ.Böl:1 Dük:1</span>
+              </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top: 24px; margin-bottom: 0;">
+              <a class="btn btn-primary" href="https://wa.me/905539253475?text=Merhaba%20Mavzer%20Reklam%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp'tan Yaz</a>
+              <a class="btn btn-secondary" href="tel:+905539253475">Hemen Ara</a>
+            </div>
           </div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/905539253475" target="_blank" rel="noopener">WhatsApp'tan Yaz</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/mavzerreklam/" target="_blank" rel="noopener">Instagram'a Git</a>
+
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps?q=%C4%B0stanbul%20Esenyurt%20P%C4%B1nar%20Mahallesi%20S%C3%B6nmez%20Caddesi%20No:169%20Ba%C4%9F.B%C3%B6l:1%20D%C3%BCk:1&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
-        </div>
-        <div class="map-card reveal">
-          <iframe
-            title="Mavzer Reklam Konum"
-            src="https://www.google.com/maps?q=%C4%B0stanbul%20Esenyurt%20P%C4%B1nar%20Mahallesi%20S%C3%B6nmez%20Caddesi%20No:169%20Ba%C4%9F.B%C3%B6l:1%20D%C3%BCk:1&z=16&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Mavzer Reklam Tabela & Dijital Baskı</strong>
-        <p>Modern tabela, baskı ve uygulama çözümleri.</p>
+    <div class="container footer-row">
+      <div class="brand">
+        <img src="logo.jpeg" alt="Mavzer Reklam Logo" class="brand-logo" />
+        <div class="brand-text">
+          <strong>Mavzer Reklam</strong>
+          <span>Tabela & Dijital Baskı</span>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#projeler">Projeler</a>
-        <a href="#iletisim">İletişim</a>
-      </div>
+
+      <p>© 2026 Mavzer Reklam. Tüm hakları saklıdır.</p>
     </div>
   </footer>
 
-  <a class="floating-whatsapp" href="https://wa.me/905539253475" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geç">
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/905539253475?text=Merhaba%20Mavzer%20Reklam%2C%20bilgi%20almak%20istiyorum."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     WhatsApp
   </a>
 
   <script src="script.js"></script>
 </body>
 </html>
-
